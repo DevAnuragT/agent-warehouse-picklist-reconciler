@@ -1,0 +1,35 @@
+{
+  "slug": "warehouse-picklist-reconciler",
+  "title": "Warehouse Picklist Reconciler",
+  "category": "warehouse-operations",
+  "description": "Checks picklist reconciliation for quantity variance, unknown SKUs, and picklist identity.",
+  "decision": "Checks picklist reconciliation for quantity variance, unknown SKUs, and picklist identity.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "quantity_variance_count": 0,
+    "unknown_sku_count": 0,
+    "picklist_id": "pick-2026-919"
+  },
+  "bad": {},
+  "rules": [
+    [
+      "quantity_variance_count",
+      "quantity variance count",
+      "max",
+      0
+    ],
+    [
+      "unknown_sku_count",
+      "unknown SKU count",
+      "max",
+      0
+    ],
+    [
+      "picklist_id",
+      "picklist identifier",
+      "required",
+      null
+    ]
+  ]
+}

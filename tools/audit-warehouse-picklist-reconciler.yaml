@@ -1,0 +1,18 @@
+name: audit-warehouse-picklist-reconciler
+description: Run Warehouse Picklist Reconciler checks
+version: 0.1.0
+input_schema:
+  type: object
+  properties:
+    payload: {type: object}
+  required: [payload]
+output_schema:
+  type: object
+  properties:
+    status: {type: string}
+    score: {type: object}
+    findings: {type: array}
+implementation:
+  type: script
+  path: audit-warehouse-picklist-reconciler.py
+  runtime: python3

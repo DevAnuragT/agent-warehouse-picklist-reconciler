@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: warehouse-picklist-reconciler
+version: 0.1.0
+description: "Checks picklist reconciliation for quantity variance, unknown SKUs, and picklist identity."
+skills:
+  - warehouse-picklist-reconciler-skill
+tools:
+  - audit-warehouse-picklist-reconciler
+tags:
+  - warehouse-operations
+  - evidence-driven
